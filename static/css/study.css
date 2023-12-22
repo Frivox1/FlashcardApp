@@ -1,0 +1,84 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.flashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 16px;
+    width: 250px; /* Ajustement de la largeur */
+    height: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-front, .card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-front {
+    background-color: #007ccf;
+    color: #fff;
+}
+
+.card-back {
+    background-color: #005b97;
+    color: #fff;
+    display: none;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 32px); /* Pour deux cartes par ligne sur des écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 32px); /* Pour une carte par ligne sur des écrans encore plus petits */
+    }
+}
